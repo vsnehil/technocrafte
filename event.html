@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>NIET Technocrafts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+   <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="css/main.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" >
+var pApp=angular.module('postApp',[]);
+pApp.controller('postController', function($scope, $http){
+    $scope.submitForm=function(){
+      
+
+      $http({
+        method:'POST',
+        url :'clone.php',
+        data:{'name':$scope.name,'roll':$scope.roll,'year':$scope.year,'branch':$scope.branch,'email':$scope.email}
+      })
+
+      .success(function(data){
+       alert("you have been registered");
+      });
+    }
+  });
+
+
+
+</script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+ 
+  .container {
+      padding: 80px 120px;
+  }
+ 
+ 
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  
+  
+ 
+  
+  
+  
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  {
+      resize: none;
+  }
+   .first{box-shadow:10px 10px 10px black;
+         border-radius: 7px;
+      }
+      input{color: black;}
+     
+#myNavbar{
+  font-size: 80%;
+}
+#about{
+  background-color: white;
+  width: 100%
+}
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse" id="#myNavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="font-size:200%;" href="#">NIET TECHNOCRAFTS</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">HOME</a></li>
+        <li class="active"><a href="#">REGISTER</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="Contact.html">CONTACT US</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+ 
+
+     
+<div  class="container text-center" id="about">
+  <h3 align="center">TECHNOCRAFTS</h3>
+  
+  <div class="row" style="font-style: italic;">Hello everyone!</div>
+  <div class="row" style="font-style: italic;">
+  This website will give you updates about events that are going to
+  be held by the technocrats in our collage. Our 1st event this year
+  is going to be held for the coding geeks. The event name is
+   "The Codestreak." people from b.tech(IT&CS branch) and MCA are 
+  invited to be a part of it and show off their skills and have some fun.
+  Codestreak will comprise of two rounds. The first round is pattern 
+  recognition round where codes will be given to you and you have to
+  draw the patterns by dry running the codes. The second round is
+   of debugging the programs where you have to find the errors in the 
+  programs.</div>
+  <div class="row" style="font-style: italic;">Date:20 August 2016</div>
+  <div class="row" style="font-style: italic;">Venue: D block</div>
+  <div class="row" style="font-style: italic;">Time:10 am onwards</div>
+  
+</div>
+
+
+<div id="reg" class="bg-1" >
+  <div class="container" ng-app="postApp" ng-controller="postController" >
+  <div style="font-style: italic;" class="card" style="box-shadow:10px 10px 10px black" >
+
+ <form class="form-horizontal card-block" name="userForm" role="form" ng-submit="submitForm();" id="myform">
+    <div class="form-group">
+     <label class="control-label col-sm-2">Name:</label>
+  <input class="col-sm-9 first input" type="text" name="name" ng-model="name" placeholder="Enter your name" required>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-2">Roll number:</label>
+
+  <input class="col-sm-9 first input" type="number" name="roll" ng-model="roll" placeholder="Enter your roll number" required>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-2">Year:</label>
+<label class="radio-inline"><input  type="radio" name="year" value="1" ng-model="year" required >1nd year</label>
+      <label class="radio-inline"><input type="radio" name="year" value="2" ng-model="year"  required>2nd year</label>
+    
+      <label class="radio-inline"><input type="radio" name="year" value="3" ng-model="year" required>3rd year</label>
+    
+    
+      <label class="radio-inline"><input type="radio" name="year" value="4" ng-model="year" required>4th year</label>
+    </div>
+    <div class="form-group"> 
+<label class="control-label col-sm-2">Branch:</label>
+
+      <label class="radio-inline"><input type="radio" name="branch" value="CS" ng-model="branch" required>CS</label>
+      <label class="radio-inline"><input type="radio" name="branch" value="IT" ng-model="branch" required>IT</label>
+    <label class="radio-inline"><input type="radio" name="branch" value="MCA" ng-model="branch" required>MCA</label>
+    </div>
+    <div class="form-group">
+<label class="control-label col-sm-2">Email:</label>
+    
+  <input class="col-sm-9 first input" type="email" name="email" ng-model="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group" align="center">
+      <button type="submit" class="btn btn-default">Submit</button>
+</div>
+  </form>  
+
+  </div>    
+      </div>
+      </div>
+  
+ 
+
+
+
+
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  
+</footer>
+
+<script>
+$(document).ready(function(){
+  
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    
+    if (this.hash !== "") {
+
+      
+      event.preventDefault();
+
+      
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+</script>
+
+</body>
+</html>
+

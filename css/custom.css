@@ -1,0 +1,89 @@
+
+.jumbotron{
+			background-color:#2E2D88;
+			color:white;
+			}
+		/* Adds borders for tabs */
+			.tab-content {
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 0px;
+			}
+			h3 {
+
+				color: #fff;
+			}
+			.nav-tabs {
+				margin-bottom: 0;
+			}
+
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: Calibri, sans-serif;
+			}
+			.background-wrap-index {
+				position: fixed;
+				z-index: -1000;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				top: 0;
+				left: 0;
+			}
+			
+			#video-bg-elem {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				min-width: 100%;
+			}
+			.content-index {
+				position: absolute;
+				width: 100%;
+				min-height: 100%;
+				z-index: 1000;
+				background-color: rgba(0,0,0,0.7);
+			}
+			.content-index h1 {
+				text-align: center;
+				font-size: 65px;
+				text-transform: uppercase;
+				font-weight: 300;
+				color: #fff;
+				padding-top: 20%;
+				margin-bottom: 10px;
+			}
+			.content-index p {
+				text-align: center;
+				font-size: 20px;
+				letter-spacing: 3px;
+				color: #aaa;
+			}
+			ul li{display: inline-block;}
+			ul li:hover {background: #800000;}
+			ul li:hover ul{display: block;}
+			ul li ul {
+  			position: absolute;
+  			width: 200px;
+  			display: none;
+			}
+			ul li ul li { 
+  			background:; 
+  			display: block; 
+			}
+			ul li ul li a {display:block !important;} 
+			ul li ul li:hover {background: #333333;}
+			
+
+ 		body{
+ 			background-color: #404040;
+ 		}
+			
+
+			
